@@ -3,6 +3,22 @@ using DesafioProjetoHospedagem.Models;
 
 Console.OutputEncoding = Encoding.UTF8;
 
+// User interface
+Console.WriteLine("Welcome to our hotelling program! Can you state your name?");
+string userName = Console.ReadLine();
+Console.WriteLine($"Welcome, {userName}! Do you wish to register a new person?");
+Console.WriteLine(" 1 - Yes\n 2 - No");
+int userChoiceRegistration = Console.Read();
+
+//Checking for opting out
+if (userChoiceRegistration == 2)
+{
+    Console.WriteLine($"Got it! Thanks for using our program, {userName}.");
+    System.Environment.Exit(0);
+}
+
+Console.WriteLine($"Ok, {userName}. Let's begin.");
+
 // Cria os modelos de hóspedes e cadastra na lista de hóspedes
 List<Pessoa> hospedes = new List<Pessoa>();
 
